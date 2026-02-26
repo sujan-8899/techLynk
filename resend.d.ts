@@ -1,0 +1,22 @@
+declare module "resend" {
+  export interface SendEmailOptions {
+    from: string
+    to: string | string[]
+    subject: string
+    replyTo?: string
+    html?: string
+    text?: string
+  }
+
+  export interface SendEmailResponse {
+    data?: { id: string }
+    error?: { message: string }
+  }
+
+  export class Resend {
+    constructor(apiKey?: string)
+    emails: {
+      send(options: SendEmailOptions): Promise<SendEmailResponse>
+    }
+  }
+}

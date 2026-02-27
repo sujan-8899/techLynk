@@ -14,9 +14,21 @@ export async function POST(request: Request) {
 
   try {
     const apiKey = env.RESEND_API_KEY()
-    if (!apiKey && process.env.NODE_ENV === "production") {
+    if (!apiKey) {
+      if (process.env.NODE_ENV === "production") {
+        return NextResponse.json(
+          {
+            error:
+              "Email service is not configured. Set RESEND_API_KEY in your environment (see .env.example).",
+          },
+          { status: 503 }
+        )
+      }
       return NextResponse.json(
-        { error: "Email service is not configured" },
+        {
+          error:
+            "Email is not configured locally. Copy .env.example to .env.local and set RESEND_API_KEY (get one at resend.com).",
+        },
         { status: 503 }
       )
     }

@@ -23,6 +23,26 @@ pnpm build
 pnpm start
 ```
 
+## Docker
+
+The image does not include env files (they are in `.dockerignore`). For Resend to work in the container, pass env vars at runtime.
+
+**Using Docker Compose** (recommended): create a `.env` in the project root and set `RESEND_API_KEY` (and optionally `RESEND_FROM_EMAIL`, `RESEND_TO_EMAIL`). Compose will load it via `env_file: .env`.
+
+```bash
+cp .env.example .env
+# Edit .env and set RESEND_API_KEY=re_your_key
+docker compose up --build
+```
+
+**Using `docker run`:** pass the key explicitly or use an env file:
+
+```bash
+docker build -t oracle-fusion .
+docker run -p 3000:3000 --env-file .env oracle-fusion
+# or: docker run -p 3000:3000 -e RESEND_API_KEY=re_xxx -e RESEND_FROM_EMAIL="..." -e RESEND_TO_EMAIL="..." oracle-fusion
+```
+
 ## Rate limiting
 
 Contact and journey APIs are limited to 10 requests per minute per IP (in-memory). For multi-instance or high traffic, use a Redis-based limiter (e.g. `@upstash/ratelimit`).

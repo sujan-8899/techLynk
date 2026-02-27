@@ -64,7 +64,7 @@ export default function Hero() {
   const slide = slides[currentSlide]
 
   return (
-    <section className="relative min-h-screen pt-24 flex items-center justify-center overflow-hidden bg-background">
+    <section className="relative min-h-screen pt-24 flex items-start md:items-center justify-center overflow-hidden bg-background">
       <div className="absolute inset-0 z-0">
         <Image src={slide.image || "/placeholder.svg"} alt={slide.title} fill className="object-cover scale-105 transition-transform duration-700 opacity-30" priority />
         {/* Light theme overlay - solid wash so text is readable */}
@@ -83,9 +83,9 @@ export default function Hero() {
       {/* Content Container */}
       <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8 flex items-center justify-center">
         <div className="w-full max-w-7xl py-16 sm:py-20">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div className="grid md:grid-cols-2 gap-8 sm:gap-10 lg:gap-16 items-start md:items-center">
             {/* Left Column - Main Content */}
-            <div className="text-center lg:text-left space-y-8 animate-slide-up">
+            <div className="text-center md:text-left space-y-8 animate-slide-up">
               {/* Company Badge */}
               <div className="inline-block animate-scale-in">
                 <div className="glass-primary px-6 py-3 rounded-lg border border-primary/50 shadow-lg shadow-primary/20 backdrop-blur-xl inline-flex items-center gap-2">
@@ -104,12 +104,12 @@ export default function Hero() {
               </h1>
 
               {/* Description */}
-              <p className="section-intro text-lg sm:text-xl md:text-2xl max-w-2xl mx-auto lg:mx-0">
+              <p className="section-intro text-lg sm:text-xl md:text-2xl max-w-2xl mx-auto md:mx-0">
                 {slide.description}
               </p>
 
               {/* Stats Grid - Professional Metrics */}
-              <div className="grid grid-cols-3 gap-4 sm:gap-6 pt-4">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 pt-4">
                 {slide.stats.map((stat, idx) => {
                   const Icon = stat.icon
                   return (
@@ -134,11 +134,11 @@ export default function Hero() {
               </div>
 
               {/* CTA Button */}
-              <div className="pt-4">
-                <button className="group inline-flex items-center justify-center gap-3 px-8 sm:px-10 py-4 sm:py-5 bg-primary text-primary-foreground text-base sm:text-lg rounded-xl font-semibold hover:shadow-xl hover:shadow-primary/30 transition-all duration-300 transform hover:scale-105 active:scale-95 border border-primary/40">
+              <div className="pt-4 flex justify-center md:justify-start">
+                {/* <button className="group inline-flex items-center justify-center gap-3 px-8 sm:px-10 py-4 sm:py-5 bg-primary text-primary-foreground text-base sm:text-lg rounded-xl font-semibold hover:shadow-xl hover:shadow-primary/30 transition-all duration-300 transform hover:scale-105 active:scale-95 border border-primary/40">
                   <span className="relative z-10">{slide.cta}</span>
                   <ArrowRight size={20} className="relative z-10 group-hover:translate-x-1 transition-transform duration-300" />
-                </button>
+                </button> */}
               </div>
             </div>
 

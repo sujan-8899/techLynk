@@ -8,7 +8,7 @@ const partners = [
   { name: "AWS", icon: Cloud, category: "Cloud Services" },
   // { name: "Google Cloud", icon: Cloud, category: "Cloud Platform" },
   // { name: "Salesforce", icon: Database, category: "CRM Platform" },
-  { name: "IBM", icon: Building2, category: "Technology Services" },
+  // { name: "IBM", icon: Building2, category: "Technology Services" },
   // { name: "SAP", icon: Database, category: "ERP Solutions" },
   { name: "Deloitte", icon: Briefcase, category: "Consulting" },
   { name: "Accenture", icon: Users, category: "Professional Services" },

@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
+import "../dark-theme.css"
 
 const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
@@ -12,7 +13,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://techlynk.com"
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Techlynk | Enterprise Software Solutions",
+    default: "Techlynk",
     template: "%s | Techlynk",
   },
   description:
@@ -20,19 +21,10 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: "/icon-light-32x32.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/icon-dark-32x32.png",
-        media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: "/icon.svg",
-        type: "image/svg+xml",
+        url: "/icon.png?v=2",
       },
     ],
-    apple: "/apple-icon.png",
+    apple: "/icon.png?v=2",
   },
   openGraph: {
     type: "website",

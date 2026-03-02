@@ -82,10 +82,10 @@ export default function ContactSection() {
                 <div>
                   <h4 className="card-title !mb-2">Email</h4>
                   <a
-                    href="mailto:team.techlynk@gmail.com"
+                    href="mailto:support@techlynk.co"
                     className="text-muted-foreground hover:text-primary text-lg sm:text-xl transition-colors font-medium"
                   >
-                    team.techlynk@gmail.com
+                    support@techlynk.co
                   </a>
                 </div>
               </div>

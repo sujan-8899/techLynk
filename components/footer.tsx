@@ -29,8 +29,8 @@ export default function Footer() {
                 <Mail className="w-8 h-8 sm:w-10 sm:h-10 text-primary" />
               </div>
               <h4 className="card-title !mb-3">Email</h4>
-              <a href="mailto:team.techlynk@gmail.com" className="text-muted-foreground hover:text-primary transition-colors text-base sm:text-lg font-medium">
-                team.techlynk@gmail.com
+              <a href="mailto:support@techlynk.co" className="text-muted-foreground hover:text-primary transition-colors text-base sm:text-lg font-medium">
+                support@techlynk.co
               </a>
             </div>
             <div className="group animate-slide-up" style={{ animationDelay: "0.2s" }}>

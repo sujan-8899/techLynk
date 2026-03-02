@@ -1,7 +1,7 @@
 // Hardcoded config (no env vars required for Resend/contact)
 const RESEND_API_KEY = "re_QJz1MWz5_36xnhwUgnxW3PWfskHWnSzug"
-const RESEND_FROM_EMAIL = "Tech Lynk <onboarding@resend.dev>"
-const RESEND_TO_EMAIL = "team.techlynk@gmail.com"
+const RESEND_FROM_EMAIL = "support@techlynk.co"
+const RESEND_TO_EMAIL = "support@techlynk.co"
 const CONTACT_PHONE = "+91 95737 87824"
 const CONTACT_LOCATION = "Hyderabad, India"
 
